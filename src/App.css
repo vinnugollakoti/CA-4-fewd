@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+html {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #abd1c6;
+}
+.kalvium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: x-large;
+  color: #014441;
+}
+.nav-contents {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.main-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #eff0f3;
+  width: 80%;
+  margin: 0 auto;
+  height: 73%;
+  border-radius: 15px;
+  align-items: center;
+}
+.result-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #eff0f3;
+  width: 60%;
+  height: 40%;
+  margin: 0 auto;
+  border-radius: 15px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h3 {
+  text-align: center;
+  color: #407372;
+}
+h2 {
+  text-align: center;
+  color: black;
+}
+.options-div {
+  /* border: 3px solid black; */
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.options {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding-top: 0.9%;
+  padding-bottom: 0.9%;
+  width: 80%;
+  margin-top: 2%;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+.options:hover {
+  background-color: #abd1c6;
+  color: #014441;
+}
+.highlight-btn {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2%;
+}
+/* --------------------------------------------------------------------------------------------------------- */
+/* mobile responsive */
+@media only screen and (max-width: 768px) {
+  .kalvium {
+    font-size: 1.2rem; /* Adjust font size for tablet */
+  }
+  
+  .main-box, .result-box {
+    width: 90%; /* Adjust width for tablet */
+  }
+  
+  .options {
+    padding: 8px 16px; /* Adjust padding for tablet */
+    max-width: 250px; /* Adjust maximum width for tablet */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .kalvium {
+    font-size: 1rem; /* Adjust font size for mobile */
+  }
+  
+  .main-box, .result-box {
+    width: 90%; /* Adjust width for mobile */
+  }
+  
+  .options {
+    padding: 6px 12px; /* Adjust padding for mobile */
+    max-width: 200px; /* Adjust maximum width for mobile */
+  }
+  .highlight {
+    margin-top: 5%;
+  }
+}
+
+
+
+
+/* -------------------------------------------------------------------------------------------------- */
+/* button styles */
+.highlight {
+  --color: #4a8f7c;
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  /* margin: 20px; */
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+}
+
+.highlight:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.highlight:hover {
+  color: #fff;
+}
+
+.highlight:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+.highlight:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.highlight:active:before {
+  background: #014441;
+  transition: background 0s;
+}
+.btn-container {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.btn-container i {
+  display: inline-block;
+  position: relative;
+  top: -9px;
+}
+/* --------------------------------------------------------------------------------------------------- */
+label {
+  font-size: 13px;
+  color: #424242;
+  font-weight: 500;
+}
+
+.btn-color-mode-switch {
+  display: inline-block;
+  margin: 0px;
+  position: relative;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner {
+  margin: 0px;
+  width: 140px;
+  height: 30px;
+  background: #e0e0e0;
+  border-radius: 26px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  /*box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;*/
+  display: block;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:before {
+  content: attr(data-on);
+  position: absolute;
+  font-size: 12px;
+  font-weight: 500;
+  top: 7px;
+  right: 20px;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:after {
+  content: attr(data-off);
+  width: 70px;
+  height: 16px;
+  background: #fff;
+  border-radius: 26px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 6px -2px #111;
+  padding: 5px 0px;
+}
+
+.btn-color-mode-switch > .alert {
+  display: none;
+  background: #ff9800;
+  border: none;
+  color: #fff;
+}
+
+.btn-color-mode-switch input[type="checkbox"] {
+  cursor: pointer;
+  width: 50px;
+  height: 25px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  margin: 0px;
+}
+
+.btn-color-mode-switch
+  input[type="checkbox"]:checked
+  + label.btn-color-mode-switch-inner {
+  background: #151515;
+  color: #fff;
+}
+
+.btn-color-mode-switch
+  input[type="checkbox"]:checked
+  + label.btn-color-mode-switch-inner:after {
+  content: attr(data-on);
+  left: 68px;
+  background: #3c3c3c;
+}
+
+.btn-color-mode-switch
+  input[type="checkbox"]:checked
+  + label.btn-color-mode-switch-inner:before {
+  content: attr(data-off);
+  right: auto;
+  left: 20px;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked ~ .alert {
+  display: block;
+}
+
+.dark-preview {
+  background: #0d0d0d;
+}
+
+.white-preview {
+  background: #fff;
+}
