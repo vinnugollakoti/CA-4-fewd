@@ -1,13 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 
 export default function Result() {
-  const {id} = useParams()
+  const [backgroundColor, setBackgroundColor] = useState("#abd1c6");
+  useEffect(() => {
+    document.documentElement.style.backgroundColor = backgroundColor;
+    document.body.style.backgroundColor = backgroundColor;
+  }, [backgroundColor]);
+
+  const Modes = () => {
+    setBackgroundColor(backgroundColor === "#abd1c6" ? "#407372" : "#abd1c6");
+  };
+  const kalviumTextColor = backgroundColor === "#abd1c6" ? "#014441" : "white";
+  const { id } = useParams();
   return (
     <div>
       <nav className="nav">
         <div className="nav-contents">
-          <div className="kalvium">
+          <div className="kalvium" style={{ color: kalviumTextColor }}>
             <b>Kalvium</b>
           </div>
           <div className="btn-container">
@@ -29,6 +39,7 @@ export default function Result() {
                 id="color_mode"
                 name="color_mode"
                 type="checkbox"
+                onChange={Modes}
               />
               <label
                 class="btn-color-mode-switch-inner"
@@ -57,11 +68,15 @@ export default function Result() {
         </div>
       </nav>
 
-      <div className='result-box'>
+      <div className="result-box">
         <h2>Final Results</h2>
-        <h2 style={{color: "#407372"}}>{id} out of 5 correct-({id/5*100}%)</h2>
-        <Link to={"/"}><button className='highlight'>Restart</button></Link>
+        <h2 style={{ color: "#407372" }}>
+          {id} out of 5 correct-({(id / 5) * 100}%)
+        </h2>
+        <Link to={"/"}>
+          <button className="highlight">Restart</button>
+        </Link>
       </div>
     </div>
-  )
+  );
 }

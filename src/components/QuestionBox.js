@@ -96,8 +96,8 @@ export default function QuestionBox() {
         </div>
       </nav>
       <div className="main-box">
-        <h3>Question {currentQuestionIndex + 1} out of 5</h3>
-        <h2 style={{ color: highlight }}>{currentQuestion.text}</h2>
+        <h3 className="question-no">Question {currentQuestionIndex + 1} out of 5</h3>
+        <h2 style={{ color: highlight }} className="question">{currentQuestion.text}</h2>
         <div className="options-div">
           {currentQuestion.options.map((option, index) => (
             <div

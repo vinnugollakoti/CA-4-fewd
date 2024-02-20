@@ -93,31 +93,39 @@ h2 {
 /* mobile responsive */
 @media only screen and (max-width: 768px) {
   .kalvium {
-    font-size: 1.2rem; /* Adjust font size for tablet */
+    font-size: 1.2rem; 
   }
   
   .main-box, .result-box {
-    width: 90%; /* Adjust width for tablet */
+    width: 90%;
   }
   
   .options {
-    padding: 8px 16px; /* Adjust padding for tablet */
-    max-width: 250px; /* Adjust maximum width for tablet */
+    padding: 8px 16px;
+    max-width: 250px; 
+  }
+  .highlight {
+    margin-top: 5%;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .kalvium {
-    font-size: 1rem; /* Adjust font size for mobile */
+    font-size: 1.3rem; 
   }
-  
   .main-box, .result-box {
-    width: 90%; /* Adjust width for mobile */
+    width: 90%; 
   }
-  
+  .question-no {
+    font-size: 13px;
+  }
   .options {
-    padding: 6px 12px; /* Adjust padding for mobile */
-    max-width: 200px; /* Adjust maximum width for mobile */
+    padding: 6px 12px;
+    max-width: 200px;
+    font-size: 16px; 
+  }
+  .question {
+    font-size: 20px;
   }
   .highlight {
     margin-top: 5%;
