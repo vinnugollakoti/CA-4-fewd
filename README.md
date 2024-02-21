@@ -1,50 +1,32 @@
 ![Logo-nav](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/Kalvium-Logo.png)
 
-### CA - 4: More Quiz
+### CA - 4 FEWD
+Welcome to the Quiz App! This application allows users to participate in quizzes by answering a series of questions. Below, you'll find information on how to set up and use the Quiz App.
 
+### FEATURES
+-- Take quizzes composed of multiple-choice questions.
+-- Navigate through questions using intuitive controls.
+-- See your score at the end of the quiz.
+-- Dark mode and light mode options for user preference.
 
-### Part 1:
-You are asked to create a quiz app using functional components (have to use `hooks` for state-management).
-There are few functionalities - that you need to achieve ->
+### Usage
+-- Taking a Quiz: Once you select a quiz, you'll be presented with multiple-choice questions. Choose an answer for each question by clicking on the respective option.
 
-1. An option through which one can toggle between `dark` and `light` mode.
-2. Once you answer a particular question -> you should be able to move to the next question automatically - until you reach the last question. (You cannot attempt a question twice -> so no need for a functionality which can lead you back to the previous question.)
-3. Once you answer the final question -> a result screen should pop-up --> displaying your result.
+-- Navigation: Navigate through the quiz using the navigation buttons provided. You can move to the next question, go back to the previous question, or jump to a specific question using the question list.
 
-#### Steps to follow:
+-- Highlighting: You can highlight important information in a question by clicking the "Highlight" button. Clicking "Remove Highlight" will remove the highlight.
 
-1. The structure of the project is already provided to you. You just need to clone this repository and run the following command: `npm i` or `npm install`.
-2. The set of questions is also provided to you inside `questions.js` file. 
-   **NOTE:** Inside `questions.js` -> there are total of 5 questions, out of which only the first question is complete. You need to complete the other questions by filling-in the values for `isCorrect` field.
-3. There are two functional components: 
-   1. QuestionBox.js -> you have to implement the following features inside this component:
-       1. `Question: 2 out of 5` ( if you are at the first question -> where 2 is coming from your current question number, and 5 is coming from the total number of questions.)
-       2. Question description
-       3. 4 Options for the above question
+-- Dark Mode/Light Mode: Toggle between dark mode and light mode using the switch provided in the navigation bar.
 
-    You can take the below picture as reference:
+-- End of Quiz: After answering all questions, you'll see your score displayed on the screen. You can also view the correct answers for each question.
 
-    ![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/ca-4-react-quiz.png)
+-- Restarting or Selecting Another Quiz: You can restart the quiz or select another quiz to take from the homepage.
 
-  2. Result.js -> Once the user have attempted all the questions, he/she should get his/her score in percentage.
-     You can take the below picture as reference:
+### Technologies Used
+- React: Frontend library for building user interfaces.
+- React Router: For declarative routing in the application.
+- CSS: Styling the components and layout.
+- HTML: Markup language for structuring the application.
 
-     ![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/ca-4-react-final.png)
-
-**NOTE:** when you click on the button which changes toggles between dark and light mode -> the inner text of the button should also change -> ie: if the background is `dark` -> then `light` should be written on the button, else the vice-versa. You can see all the required functionalities working in the below given gif:
-
-#### Demo:
-
-![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/ca-4-react-quiz-section-one.gif)
-
-### Part2: More to come:
-
-Once all the above mentioned functionalities are achieved -> then create two buttons named as 
-1. Highlight: which upon clicking should highlight the `question text` -> by highlight we mean that -> the color of the question text should change to `red`.
-2. Remove Highlight: which upon clicking should remove the red color and go back to the color which was used earlier -> in the above eg case -> the color should come back to dark blue color.
-
-You can see the working demo below in the gif:
-
-![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/ca-4-react-quiz-section.gif)
-
-Happy Coding ❤️!
+### Contributing
+Contributions to the Quiz App are welcome! Feel free to open issues for bug fixes, feature requests, or any suggestions you may have. Pull requests are also encouraged.

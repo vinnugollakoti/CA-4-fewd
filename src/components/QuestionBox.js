@@ -14,8 +14,12 @@ export default function QuestionBox() {
     document.body.style.backgroundColor = backgroundColor;
   }, [backgroundColor]);
 
-  const Modes = () => {
-    setBackgroundColor(backgroundColor === "#abd1c6" ? "#407372" : "#abd1c6");
+  const Modes = (event) => {
+    if (event.target.checked) {
+      setBackgroundColor("#00302d"); // Change to dark mode color
+    } else {
+      setBackgroundColor("#abd1c6"); // Change to light mode color
+    }
   };
 
   const handleHighlight = () => {

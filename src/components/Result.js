@@ -7,10 +7,14 @@ export default function Result() {
     document.documentElement.style.backgroundColor = backgroundColor;
     document.body.style.backgroundColor = backgroundColor;
   }, [backgroundColor]);
-
-  const Modes = () => {
-    setBackgroundColor(backgroundColor === "#abd1c6" ? "#407372" : "#abd1c6");
-  };
+// 00302d
+const Modes = (event) => {
+  if (event.target.checked) {
+    setBackgroundColor("#00302d"); // Change to dark mode color
+  } else {
+    setBackgroundColor("#abd1c6"); // Change to light mode color
+  }
+};
   const kalviumTextColor = backgroundColor === "#abd1c6" ? "#014441" : "white";
   const { id } = useParams();
   return (
