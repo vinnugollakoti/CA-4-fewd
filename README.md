@@ -16,6 +16,10 @@ Welcome to the Quiz App! This application allows users to participate in quizzes
 
 -- Highlighting: You can highlight important information in a question by clicking the "Highlight" button. Clicking "Remove Highlight" will remove the highlight.
 
+
+https://github.com/vinnugollakoti/CA-4-fewd/assets/145451307/3ad1f66e-770c-4d21-bb92-a313f4a7aacc
+
+
 -- Dark Mode/Light Mode: Toggle between dark mode and light mode using the switch provided in the navigation bar.
 
 -- End of Quiz: After answering all questions, you'll see your score displayed on the screen. You can also view the correct answers for each question.
