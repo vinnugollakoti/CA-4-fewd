@@ -22,9 +22,17 @@ https://github.com/vinnugollakoti/CA-4-fewd/assets/145451307/3ad1f66e-770c-4d21-
 
 -- Dark Mode/Light Mode: Toggle between dark mode and light mode using the switch provided in the navigation bar.
 
+
+https://github.com/vinnugollakoti/CA-4-fewd/assets/145451307/ebfda0b9-50ae-4222-8ba7-de00b4a17a53
+
+
 -- End of Quiz: After answering all questions, you'll see your score displayed on the screen. You can also view the correct answers for each question.
 
 -- Restarting or Selecting Another Quiz: You can restart the quiz or select another quiz to take from the homepage.
+
+
+https://github.com/vinnugollakoti/CA-4-fewd/assets/145451307/46d36c3f-f241-4b0a-8c74-1c3197d6f0c4
+
 
 ### Technologies Used
 - React: Frontend library for building user interfaces.
