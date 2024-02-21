@@ -42,3 +42,5 @@ https://github.com/vinnugollakoti/CA-4-fewd/assets/145451307/46d36c3f-f241-4b0a-
 
 ### Contributing
 Contributions to the Quiz App are welcome! Feel free to open issues for bug fixes, feature requests, or any suggestions you may have. Pull requests are also encouraged.
+
+## Developed by vinnugollakoti❤️
