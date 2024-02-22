@@ -30,19 +30,32 @@ export default function QuestionBox() {
     setHighlight("black");
   };
 
-  const chooseOption = (optionText, isCorrect) => {
-    if (currentQuestionIndex === 4) {
-      console.log("No more questions available");
-      navigate(`/result/${score + 1}`);
-    } else {
-      if (isCorrect) {
-        setScore((prevScore) => prevScore + 1);
+  // const chooseOption = (optionText, isCorrect) => {
+  //   if (currentQuestionIndex === 4) {
+  //     console.log("No more questions available");
+  //     navigate(`/result/${score + 1}`);
+  //   } else {
+  //     if (isCorrect) {
+  //       setScore((prevScore) => prevScore + 1);
+  //     }
+  //     setCurrentQuestionIndex((prevIndex) =>
+  //       Math.min(prevIndex + 1, Questions.length - 1)
+  //     );
+  //   }
+  // };
+  const chooseOption = (TrueFalse) => {
+    console.log(TrueFalse)
+    if (currentQuestionIndex < 4) {
+      if(TrueFalse === true) {
+        setScore((prev) => prev + 1)
       }
-      setCurrentQuestionIndex((prevIndex) =>
-        Math.min(prevIndex + 1, Questions.length - 1)
-      );
+      setCurrentQuestionIndex((prev) => prev + 1)
+    } else {
+      console.log("no more questions are there")
+      return navigate(`/result/${TrueFalse ? score + 1 : score}`)
     }
   };
+
   const kalviumTextColor = backgroundColor === "#abd1c6" ? "#014441" : "white";
 
   return (
@@ -107,7 +120,7 @@ export default function QuestionBox() {
             <div
               className="options"
               key={index}
-              onClick={() => chooseOption(option.text, option.isCorrect)}
+              onClick={() => chooseOption(option.isCorrect)}
             >
               {option.text}
             </div>
